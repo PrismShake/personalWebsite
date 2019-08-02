@@ -1,0 +1,145 @@
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+  
+}
+
+#welcome{
+  position: center;
+  width: 500px;
+}
+
+.footer {
+  background: lightgreen;
+}
+textarea{
+
+  left: 10%;
+  top: 30px;
+  color: violet;
+  background-color:purple;
+  text-align: left;
+  font-family: 'Bitter', serif;
+  font-size: 14px;
+}
+
+.main {
+  text-align: left;
+  background: url("https://media.giphy.com/media/Y5sAjV4QXO2Aw/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+}
+
+.aside-1 {
+  background: hotpink;
+  transition: all 1s;
+  height: 900px;
+  border-radius: 25px;
+}
+.aside-1:hover{
+  transform: scale(1.1);
+}
+
+#imageOne{
+  width:300px;
+  transition: all 1s;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+#imageOne:hover{
+  transform: scale(1.7);
+}
+
+
+.aside-2 {
+  background: hotpink;
+  transition: all 1s;
+  height: 900px;
+  border-radius: 25px;
+}
+.aside-2:hover{
+  transform: scale(1.1);
+}
+/*#imageTwo{
+  width:300px;
+  transition: all 1s;
+}*/
+/*#imageTwo:hover{
+  transform: scale(1.1);
+  opacity:.03;
+}*/
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+#imageTwo {
+  opacity: 1;
+  width: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  float:center;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover #imageTwo {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: purple;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em; 
+}
+nav{
+  display:block;
+  color:violet;
+  text-align: center;
+  font-family: 'Lacquer', sans-serif;
+
+}
